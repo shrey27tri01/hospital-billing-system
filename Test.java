@@ -19,13 +19,13 @@ public class Test {
 		Reception reception = new Reception();
 
 		int nameNumber = 97;
-		String name = null;
+		String patientName = null;
 
 		for (int i = 0; i < numberOfRequests; i++) {
-			name = "patient:" + Character.toString((char)nameNumber);
+			patientName = "patient:" + Character.toString((char)nameNumber);
 			String test = s.next();
 			typesOfTests.add(test);
-			reception.addRequest(test, name);
+			reception.addRequest(test, patientName);
 			nameNumber += 1;
 		}
 
