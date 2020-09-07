@@ -23,17 +23,21 @@ public class Reception {
 		// System.out.println("Working till here");
 
 		Billing billing = new Billing();
+		PathLab pathLab = new PathLab();
+		BioChemLab bioChemLab = new BioChemLab();
 
 		if (testType.equals("Bio")) {
 			BioChemTest bioTest = new BioChemTest (id);
 			billing.billTest(bioTest);
 			billing.addToTypesOfTests(testType);
+			bioChemLab.addTest(bioTest);
 		}
 		else if (testType.equals("Path")) {
 			// System.out.println("This is a path test");
 			PathTest pathTest = new PathTest (id);
 			billing.billTest(pathTest);
 			billing.addToTypesOfTests(testType);
+			pathLab.addTest(pathTest);
 		}
 		else {
 			return false;
