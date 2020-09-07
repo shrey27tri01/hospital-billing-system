@@ -1,17 +1,23 @@
 package base;
 
-public class LabTest {
-	protected LabTest(String patientId) {
+import derived.*;
+import lab4b.*;
 
+public class LabTest {
+
+	private String patientId;
+
+	protected LabTest(String patientId) {
+		this.patientId = patientId;
 	}   // note that this should never get called explicitly
 
-	String getPatientId() { 
-		return null; 
+	String getPatientId() {
+		return this.patientId;
 	}
-	int getPrice() { 
-		return 0; 
+	int getPrice() {
+		return 0;
 	}
-	String getResult() { 
-		return null; 
+	String getResult() {
+		return null;
 	}
 }

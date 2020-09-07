@@ -3,6 +3,7 @@ package base;
 import java.util.ArrayList;
 
 import derived.*;
+import lab4b.*;
 
 public class Reception {
 
@@ -15,9 +16,9 @@ public class Reception {
 		// add that to Billing and
 		// then to the specific lab, after generating a patient ID
 
-		System.out.println(testType);
-		System.out.println(patientName);
-		System.out.println("ID: " + id);
+		// System.out.println(testType);
+		// System.out.println(patientName);
+		// System.out.println("ID: " + id);
 
 		// System.out.println("Working till here");
 
@@ -26,14 +27,20 @@ public class Reception {
 		if (testType.equals("Bio")) {
 			BioChemTest bioTest = new BioChemTest (id);
 			billing.billTest(bioTest);
-		} else if (testType.equals("Path")) {
+			billing.addToTypesOfTests(testType);
+		}
+		else if (testType.equals("Path")) {
 			// System.out.println("This is a path test");
 			PathTest pathTest = new PathTest (id);
 			billing.billTest(pathTest);
+			billing.addToTypesOfTests(testType);
+		}
+		else {
+			return false;
 		}
 
 		id = String.valueOf((Integer.parseInt(id) + 1));
 
-		return false;
+		return true;
 	}
 }

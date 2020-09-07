@@ -1,25 +1,30 @@
+package lab4b;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
 import base.*;
 import derived.*;
 
-public class Test {
+public class Lab4B {
 
 	public static void main(String[] args) {
 
 		ArrayList<String> typesOfTests = new ArrayList<String>();
 
+		int nameNumber = 97;
+		String patientName = null;
+
 		// create instance of Reception, Billing, Dispatch, BioChemLab, PathLab
+		Reception reception = new Reception();
+		Billing billing = new Billing();
+		Dispatch dispatch = new Dispatch();
+		BioChemLab bioChemLab = new BioChemLab();
+		PathLab pathLab = new PathLab();
 
 		// read in the input for test requests, and send to Reception (addRequest)
 		Scanner s = new Scanner(System.in);
 		int numberOfRequests = s.nextInt();
-
-		Reception reception = new Reception();
-
-		int nameNumber = 97;
-		String patientName = null;
 
 		for (int i = 0; i < numberOfRequests; i++) {
 			patientName = "patient:" + Character.toString((char)nameNumber);
@@ -29,14 +34,9 @@ public class Test {
 			nameNumber += 1;
 		}
 
-		// Billing billing = new Billing();
-
-		// billing.allTests();
-
-		System.out.println(typesOfTests);
-
 		// get all bills from Billing and print out the total for the day
-
+		System.out.println(billing.getTypesOfTests());
+		System.out.println("Total billed: " + billing.getTotalPrice());
 
 		// get all reports from Dispatch and print out one line at a time
 		// Each line will have: Patient ID, Test ID, result string
@@ -50,17 +50,3 @@ public class Test {
 	}
 
 }
-
-// Move to different packages and files
-// Many return statements have default values (to allow them to be compiled.
-// Replace with the correct statements.
-
-
-
-
-
-
-
-
-
-// Similarly, define a PathLabTest, PathLab etc

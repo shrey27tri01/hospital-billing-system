@@ -2,13 +2,16 @@ package base;
 
 import java.util.ArrayList;
 
-class Dispatch {
+import derived.*;
+import lab4b.*;
 
-	void processReport(LabTest test) {  
+public class Dispatch {
 
-	}   // called by individual labs 
-	ArrayList<String> getAllResults() { 
-		return null; 
+	void processReport(LabTest test) {
+
+	}   // called by individual labs
+	ArrayList<String> getAllResults() {
+		return null;
 	}
 
 }

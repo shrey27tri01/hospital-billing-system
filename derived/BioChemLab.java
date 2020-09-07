@@ -1,11 +1,12 @@
 package derived;
 
 import base.*;
+import lab4b.*;
 
-class BioChemLab extends Lab {
+public class BioChemLab extends Lab {
 
-	void addTest(BioChemTest test) {   
-	// generates testId, the report, 
+	void addTest(BioChemTest test) {
+	// generates testId, the report,
 	// and then sends it to Dispatch using processReport
 
 	}
