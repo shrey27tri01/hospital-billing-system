@@ -3,16 +3,22 @@ package base;
 import java.util.ArrayList;
 
 import derived.*;
-import lab4b.*;
+import main.*;
 
 public class Dispatch {
 
-	void processReport(LabTest test) {
-		
-	}   // called by individual labs
+	static ArrayList<String> reports = new ArrayList<String>();
 
-	ArrayList<String> getAllResults() {
-		return null;
+	// public void processReport(LabTest test) {
+	//
+	// }   // called by individual labs
+
+	public static void processReport(String report) {
+		reports.add(report);
+	}
+
+	public ArrayList<String> getAllResults() {
+		return reports;
 	}
 
 }

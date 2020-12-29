@@ -3,7 +3,7 @@ package base;
 import java.util.ArrayList;
 
 import derived.*;
-import lab4b.*;
+import main.*;
 
 public class Lab {
 

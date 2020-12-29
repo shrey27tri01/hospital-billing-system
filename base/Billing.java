@@ -1,7 +1,7 @@
 package base;
 
 import derived.*;
-import lab4b.*;
+import main.*;
 
 import java.util.ArrayList;
 
@@ -41,8 +41,6 @@ public class Billing {
 	// public void printTests() {
 	// 	System.out.println(typesOfTests);
 	// }
-
-
 
 	ArrayList<String> getBills() {
 		return null;

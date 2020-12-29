@@ -1,7 +1,7 @@
 package derived;
 
 import base.*;
-import lab4b.*;
+import main.*;
 
 public class BioChemTest extends LabTest {
 

@@ -1,7 +1,7 @@
 package base;
 
 import derived.*;
-import lab4b.*;
+import main.*;
 
 public class LabTest {
 
@@ -11,7 +11,7 @@ public class LabTest {
 		this.patientId = patientId;
 	}   // note that this should never get called explicitly
 
-	String getPatientId() {
+	public String getPatientId() {
 		return this.patientId;
 	}
 	int getPrice() {
