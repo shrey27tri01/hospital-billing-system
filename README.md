@@ -1,6 +1,6 @@
-# Hospital-pricing-system
+# Hospital-billing-system
 
-A hospital pricing and billing system implemented in java.
+A hospital billing and pricing system implemented in java.
 
 ### How it works:
 
